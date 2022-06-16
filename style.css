@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --bg-color-light:#FFFFFF;
+    --bg-color-dark:hsla(240, 5%, 7%, 1);
+    --text-color-dark:#FFFFFF;
+    --text-color-light:hsla(240, 6%, 21%, 1);
+    --bg-sound-light: hsla(240, 9%, 89%, 1);
+    --bg-sound-dark:hsla(240, 6%, 17%, 1);
+}
+
+body {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    display: grid;
+    font-weight: 500;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 2rem 0;
+}
+
+body.dark{
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark)
+}
+
+body #settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+button{
+    border: none;
+    cursor: pointer;
+}
+
+body #settings button, main #timer #controls button{
+    background:none;
+}
+
+body #settings .set svg path{
+    fill: black;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
+
+main #timer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main #timer #display{
+    font-size: clamp(5rem, 5rem + 13vw, 12.6rem);
+    display: flex;
+}
+
+main #timer #controls{
+    display: flex;
+    gap: clamp(2rem, 2rem + 1vw, 4rem);
+}
+
+
+
+main #timer #controls button svg{
+    width: clamp(2rem, 2rem + 5vw, 4.8rem);
+}
+
+main #sounds{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    width: fit-content;
+    align-items: center;
+}
+
+main #sounds button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+footer {
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: end;
+}
+
+footer p span{
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+footer #contacts{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+footer img {
+    width: 4rem;
+    border: none;
+}
