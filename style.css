@@ -59,6 +59,11 @@ main{
     display: none;
 }
 
+body #settings .set.hide{
+    display:initial;
+    visibility:hidden;
+}
+
 main #timer{
     display: flex;
     flex-direction: column;

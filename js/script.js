@@ -10,8 +10,10 @@ import {
     buttonDarkMode,
     minutesDisplay,
     secondsDisplay,
-    minutesAdd5,
-    minutesReduce5
+    rainSound,
+    forestSound,
+    firePlaceSound,
+    coffeeShopSound
 } from "./elements.js"
 
 const sound = Sound()
@@ -21,7 +23,11 @@ const controls = Controls({
     buttonPlay,
     buttonSet,
     buttonLightMode,
-    buttonDarkMode
+    buttonDarkMode,
+    rainSound,
+    forestSound,
+    firePlaceSound,
+    coffeeShopSound
 })
 
 const timer = Timer({

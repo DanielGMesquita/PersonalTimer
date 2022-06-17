@@ -3,10 +3,12 @@ export default function Controls(
         buttonPause,
         buttonPlay,
         buttonSet,
-        minutesAdd5,
-        minutesReduce5,
         buttonDarkMode,
-        buttonLightMode
+        buttonLightMode,
+        forestSound,
+        rainSound,
+        coffeeShopSound,
+        firePlaceSound,
     }
 ){
     function play(){
@@ -22,6 +24,10 @@ export default function Controls(
 
     function stop(){
         buttonSet.classList.remove('hide')
+        document.getElementById('coffeeshop').value = "0"
+        document.getElementById('forest').value = "0"
+        document.getElementById('rain').value = "0"
+        document.getElementById('fireplace').value = "0"
     }
 
     function reset(){
@@ -48,14 +54,52 @@ export default function Controls(
             return userMinutes
         }
     }
+    
+    function forest(){
+        forestSound.classList.add('active')
+        rainSound.classList.remove('active')
+        firePlaceSound.classList.remove('active')
+        coffeeShopSound.classList.remove('active')
+        document.getElementById('coffeeshop').value = "0"
+        document.getElementById('forest').value = "50"
+        document.getElementById('rain').value = "0"
+        document.getElementById('fireplace').value = "0"
+    }
 
-    // function moreFiveMinutes(){
+    function rain(){
+        forestSound.classList.remove('active')
+        rainSound.classList.add('active')
+        firePlaceSound.classList.remove('active')
+        coffeeShopSound.classList.remove('active')
+        document.getElementById('coffeeshop').value = "0"
+        document.getElementById('forest').value = "0"
+        document.getElementById('rain').value = "50"
+        document.getElementById('fireplace').value = "0"
+        
+    }
 
-    // }
+    function firePlace(){
+        forestSound.classList.remove('active')
+        rainSound.classList.remove('active')
+        firePlaceSound.classList.add('active')
+        coffeeShopSound.classList.remove('active')
+        document.getElementById('coffeeshop').value = "0"
+        document.getElementById('forest').value = "0"
+        document.getElementById('rain').value = "0"
+        document.getElementById('fireplace').value = "50"
+    }
 
-    // function lessFiveMinutes(){
+    function coffeeShop(){
+        forestSound.classList.remove('active')
+        rainSound.classList.remove('active')
+        firePlaceSound.classList.remove('active')
+        coffeeShopSound.classList.add('active')
+        document.getElementById('coffeeshop').value = "50"
+        document.getElementById('forest').value = "0"
+        document.getElementById('rain').value = "0"
+        document.getElementById('fireplace').value = "0"
+    }
 
-    // }
 
     return{
         play,
@@ -64,6 +108,10 @@ export default function Controls(
         darkTheme,
         lightTheme,
         reset,
-        inputMinutes
+        inputMinutes,
+        rain,
+        forest,
+        coffeeShop,
+        firePlace
     }
 }

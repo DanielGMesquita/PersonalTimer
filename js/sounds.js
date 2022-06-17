@@ -5,10 +5,37 @@ export default function(){
     const firePlace = new Audio("sounds/Lareira.wav")
     const coffeeShop = new Audio("sounds/Cafeteria.wav")
     const forest = new Audio("sounds/Floresta.wav")
+
     rain.loop = true
     firePlace.loop = true
     coffeeShop.loop = true
     forest.loop = true
+    
+    const rainVolume = document.getElementById('rain')
+    const forestVolume = document.getElementById('forest')
+    const coffeeShopVolume = document.getElementById('coffeeshop')
+    const firePlaceVolume= document.getElementById('fireplace')
+
+    coffeeShopVolume.value = '0'
+    forestVolume.value = "0"
+    rainVolume.value = "0"
+    firePlaceVolume.value = "0"
+
+    rainVolume.addEventListener('change', function(){
+        rain.volume = rainVolume.value/100
+    })
+
+    forestVolume.addEventListener('change', function(){
+        forest.volume = forestVolume.value/100
+    })
+
+    coffeeShopVolume.addEventListener('change', function(){
+        coffeeShop.volume = coffeeShopVolume.value/100
+    })
+
+    firePlaceVolume.addEventListener('change', function(){
+        firePlace.volume = firePlaceVolume.value/100
+    })
 
     function pressButton(){
         buttonPressAudio.play()
@@ -16,14 +43,51 @@ export default function(){
 
     function endAlert(){
         endSound.play()
+        stopSound()
+    }
+
+    function pressForestButton(){
+        rain.pause()
+        firePlace.pause()
+        coffeeShop.pause()
+        forest.play()
+    }
+
+    function pressCoffeeShopButton(){
+        rain.pause()
+        firePlace.pause()
+        coffeeShop.play()
+        forest.pause()
+    }
+
+    function pressFirePlaceButton(){
+        rain.pause()
+        firePlace.play()
+        coffeeShop.pause()
+        forest.pause()
+    }
+
+    function pressRainButton(){
+        rain.play()
+        firePlace.pause()
+        coffeeShop.pause()
+        forest.pause()
+    }
+
+    function stopSound(){
+        rain.pause()
+        firePlace.pause()
+        coffeeShop.pause()
+        forest.pause()
     }
 
     return{
-        rain,
-        firePlace,
-        coffeeShop,
-        forest,
+        pressCoffeeShopButton,
+        pressFirePlaceButton,
+        pressForestButton,
+        pressRainButton,
         pressButton,
-        endAlert
+        endAlert,
+        stopSound
     }
 }

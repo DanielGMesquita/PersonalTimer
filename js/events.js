@@ -4,9 +4,13 @@ import {
     buttonStop,
     buttonSet,
     buttonDarkMode,
-    buttonLightMode
-
-
+    buttonLightMode,
+    minutesAdd5,
+    minutesReduce5,
+    firePlaceSound,
+    coffeeShopSound,
+    rainSound,
+    forestSound
 } from "./elements.js"
 
 export default function ({controls, timer, sound}){
@@ -27,6 +31,7 @@ export default function ({controls, timer, sound}){
         controls.reset()
         timer.reset()
         sound.pressButton()
+        sound.stopSound()
     })
 
     buttonSet.addEventListener('click',function(){
@@ -48,5 +53,38 @@ export default function ({controls, timer, sound}){
     buttonLightMode.addEventListener('click',function(){
         sound.pressButton()
         controls.lightTheme()
+    })
+
+    minutesAdd5.addEventListener('click', function(){
+        sound.pressButton()
+        timer.moreFiveMinutes()
+    })
+
+    minutesReduce5.addEventListener('click', function(){
+        sound.pressButton()
+        timer.lessFiveMinutes()
+    })
+
+    coffeeShopSound.addEventListener('click',function(){
+        controls.coffeeShop()
+        sound.pressCoffeeShopButton()
+
+    })
+
+    firePlaceSound.addEventListener('click', function(){
+        controls.firePlace()
+        sound.pressFirePlaceButton()
+
+    })
+
+    rainSound.addEventListener('click', function(){
+        controls.rain()
+        sound.pressRainButton()
+
+    })
+
+    forestSound.addEventListener('click', function(){
+        controls.forest()
+        sound.pressForestButton()
     })
 }
