@@ -68,13 +68,11 @@ export default function ({controls, timer, sound}){
     coffeeShopSound.addEventListener('click',function(){
         controls.coffeeShop()
         sound.pressCoffeeShopButton()
-
     })
 
     firePlaceSound.addEventListener('click', function(){
         controls.firePlace()
         sound.pressFirePlaceButton()
-
     })
 
     rainSound.addEventListener('click', function(){

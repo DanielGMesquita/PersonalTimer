@@ -16,26 +16,64 @@ export default function(){
     const coffeeShopVolume = document.getElementById('coffeeshop')
     const firePlaceVolume= document.getElementById('fireplace')
 
-    coffeeShopVolume.value = '0'
-    forestVolume.value = "0"
-    rainVolume.value = "0"
-    firePlaceVolume.value = "0"
+    function volumeStandardSet(){
+        rain.volume = 0.5
+        forest.volume = 0.5
+        coffeeShop.volume = 0.5
+        firePlace.volume = 0.5
+        document.getElementById('coffeeshop').value = "0"
+        document.getElementById('forest').value = "0"
+        document.getElementById('rain').value = "0"
+        document.getElementById('fireplace').value = "0"
+    }
 
-    rainVolume.addEventListener('change', function(){
-        rain.volume = rainVolume.value/100
-    })
+    volumeStandardSet()
 
-    forestVolume.addEventListener('change', function(){
-        forest.volume = forestVolume.value/100
-    })
+    function rainVolumeSet(){
+        let volume = rain.volume
+        rainVolume.value = String(rain.volume*100)
+        rainVolume.addEventListener('change', function(){
+            rain.volume = rainVolume.value/100
+            volume = rain.volume
+            return volume
+        })
+        rain.volume = volume
+    }
+    
+    function forestVolumeSet(){
+        let volume = forest.volume
+        forestVolume.value = String(forest.volume*100)
+        forestVolume.addEventListener('change', function(){
+            forest.volume = forestVolume.value/100
+            volume = forest.volume
+            return volume
+        })
+        forest.volume = volume
+    }
 
-    coffeeShopVolume.addEventListener('change', function(){
-        coffeeShop.volume = coffeeShopVolume.value/100
-    })
+    function firePlaceVolumeSet(){
+        let volume = firePlace.volume
+        firePlaceVolume.value = String(firePlace.volume*100)
+        firePlaceVolume.addEventListener('change', function(){
+            firePlace.volume = firePlaceVolume.value/100
+            let volume = firePlace.volume
+            return volume
+        })
+        firePlace.volume = volume
+    }
 
-    firePlaceVolume.addEventListener('change', function(){
-        firePlace.volume = firePlaceVolume.value/100
-    })
+    function coffeeShopVolumeSet(){
+        let volume = coffeeShop.volume
+        coffeeShopVolume.value = String(coffeeShop.volume*100)
+        coffeeShopVolume.addEventListener('change', function(){
+            coffeeShop.volume = coffeeShopVolume.value/100
+            let volume = coffeeShop.volume
+            return volume
+        })
+        coffeeShop.volume = volume
+    }
+
+
 
     function pressButton(){
         buttonPressAudio.play()
@@ -47,34 +85,43 @@ export default function(){
     }
 
     function pressForestButton(){
+        volumeStandardSet()
         rain.pause()
         firePlace.pause()
         coffeeShop.pause()
         forest.play()
+        forestVolumeSet()
     }
 
     function pressCoffeeShopButton(){
+        volumeStandardSet()
         rain.pause()
         firePlace.pause()
         coffeeShop.play()
         forest.pause()
+        coffeeShopVolumeSet()
     }
 
     function pressFirePlaceButton(){
+        volumeStandardSet()
         rain.pause()
         firePlace.play()
         coffeeShop.pause()
         forest.pause()
+        firePlaceVolumeSet()
     }
 
     function pressRainButton(){
+        volumeStandardSet()
         rain.play()
         firePlace.pause()
         coffeeShop.pause()
         forest.pause()
+        rainVolumeSet()
     }
 
     function stopSound(){
+        volumeStandardSet()
         rain.pause()
         firePlace.pause()
         coffeeShop.pause()
@@ -88,6 +135,7 @@ export default function(){
         pressRainButton,
         pressButton,
         endAlert,
-        stopSound
+        stopSound,
+        volumeStandardSet
     }
 }

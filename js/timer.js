@@ -9,6 +9,7 @@ export default function({
     let endTimer
 
     function reset(){
+        updateMinutes(initialMinutes)
         updateDisplay(initialMinutes, 0)
         clearTimeout(endTimer)
     }

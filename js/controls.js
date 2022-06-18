@@ -10,7 +10,14 @@ export default function Controls(
         coffeeShopSound,
         firePlaceSound,
     }
-){
+){  
+    function resetVolumeValues(){
+        document.getElementById('coffeeshop').value = "0"
+        document.getElementById('forest').value = "0"
+        document.getElementById('rain').value = "0"
+        document.getElementById('fireplace').value = "0"
+    }
+
     function play(){
         buttonPause.classList.remove('hide')
         buttonPlay.classList.add('hide')
@@ -24,16 +31,14 @@ export default function Controls(
 
     function stop(){
         buttonSet.classList.remove('hide')
-        document.getElementById('coffeeshop').value = "0"
-        document.getElementById('forest').value = "0"
-        document.getElementById('rain').value = "0"
-        document.getElementById('fireplace').value = "0"
+        resetVolumeValues()
     }
 
     function reset(){
         buttonPlay.classList.remove('hide')
         buttonPause.classList.add('hide')
         buttonSet.classList.remove('hide')
+        resetVolumeValues()
     }
 
     function darkTheme(){
@@ -60,10 +65,7 @@ export default function Controls(
         rainSound.classList.remove('active')
         firePlaceSound.classList.remove('active')
         coffeeShopSound.classList.remove('active')
-        document.getElementById('coffeeshop').value = "0"
-        document.getElementById('forest').value = "50"
-        document.getElementById('rain').value = "0"
-        document.getElementById('fireplace').value = "0"
+        
     }
 
     function rain(){
@@ -71,10 +73,6 @@ export default function Controls(
         rainSound.classList.add('active')
         firePlaceSound.classList.remove('active')
         coffeeShopSound.classList.remove('active')
-        document.getElementById('coffeeshop').value = "0"
-        document.getElementById('forest').value = "0"
-        document.getElementById('rain').value = "50"
-        document.getElementById('fireplace').value = "0"
         
     }
 
@@ -83,10 +81,7 @@ export default function Controls(
         rainSound.classList.remove('active')
         firePlaceSound.classList.add('active')
         coffeeShopSound.classList.remove('active')
-        document.getElementById('coffeeshop').value = "0"
-        document.getElementById('forest').value = "0"
-        document.getElementById('rain').value = "0"
-        document.getElementById('fireplace').value = "50"
+        
     }
 
     function coffeeShop(){
@@ -94,10 +89,7 @@ export default function Controls(
         rainSound.classList.remove('active')
         firePlaceSound.classList.remove('active')
         coffeeShopSound.classList.add('active')
-        document.getElementById('coffeeshop').value = "50"
-        document.getElementById('forest').value = "0"
-        document.getElementById('rain').value = "0"
-        document.getElementById('fireplace').value = "0"
+        
     }
 
 
