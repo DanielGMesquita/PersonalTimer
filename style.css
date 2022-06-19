@@ -45,8 +45,12 @@ body #settings button, main #timer #controls button{
     background:none;
 }
 
-body #settings .set svg path{
+.set svg path{
     fill: black;
+}
+
+body.dark svg path{
+    fill: #FFFFFF;
 }
 
 main{
@@ -69,6 +73,7 @@ main #timer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
 }
 
 main #timer #display{
@@ -78,10 +83,8 @@ main #timer #display{
 
 main #timer #controls{
     display: flex;
-    gap: clamp(2rem, 2rem + 1vw, 4rem);
+    gap: clamp(3rem, 2rem + 2vw, 4rem);
 }
-
-
 
 main #timer #controls button svg{
     width: clamp(2rem, 2rem + 5vw, 4.8rem);
@@ -99,6 +102,29 @@ main #sounds button{
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 2.4rem;
+    padding: 2.4rem;
+}
+
+main #sounds button input{
+    width: 9rem;
+    cursor: pointer;
+    background-color: black;
+}
+
+main #sounds button svg{
+    width: 4.4rem;
+    margin-bottom: 3.2rem;
+}
+
+main #sounds button svg path{
+    fill: black
+}
+
+main #sounds button input{
+    width: 9rem;
+    height: 1.6rem;
+    cursor: pointer;
 }
 
 

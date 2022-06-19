@@ -9,6 +9,7 @@ export default function Controls(
         rainSound,
         coffeeShopSound,
         firePlaceSound,
+        page
     }
 ){  
     function resetVolumeValues(){
@@ -41,14 +42,25 @@ export default function Controls(
         resetVolumeValues()
     }
 
-    function darkTheme(){
+    function buttonDarkTheme(){
         buttonDarkMode.classList.add('hide')
         buttonLightMode.classList.remove('hide')
     }
 
     function lightTheme(){
+        page.classList.add('dark')
+        page.classList.remove('light')
+    }
+
+    function buttonLightTheme(){
         buttonDarkMode.classList.remove('hide')
         buttonLightMode.classList.add('hide')
+    }
+
+    function darkTheme(){
+        page.classList.remove('dark')
+        page.classList.add('light')
+    
     }
 
     function inputMinutes(){
@@ -97,6 +109,8 @@ export default function Controls(
         play,
         pause,
         stop,
+        buttonDarkTheme,
+        buttonLightTheme,
         darkTheme,
         lightTheme,
         reset,
@@ -105,6 +119,5 @@ export default function Controls(
         forest,
         coffeeShop,
         firePlace,
-        
     }
 }

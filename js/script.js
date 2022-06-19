@@ -13,7 +13,8 @@ import {
     rainSound,
     forestSound,
     firePlaceSound,
-    coffeeShopSound
+    coffeeShopSound,
+    page
 } from "./elements.js"
 
 const sound = Sound()
@@ -27,7 +28,8 @@ const controls = Controls({
     rainSound,
     forestSound,
     firePlaceSound,
-    coffeeShopSound
+    coffeeShopSound,
+    page
 })
 
 const timer = Timer({

@@ -10,7 +10,8 @@ import {
     firePlaceSound,
     coffeeShopSound,
     rainSound,
-    forestSound
+    forestSound,
+    page
 } from "./elements.js"
 
 export default function ({controls, timer, sound}){
@@ -47,11 +48,13 @@ export default function ({controls, timer, sound}){
 
     buttonDarkMode.addEventListener('click',function(){
         sound.pressButton()
+        controls.buttonDarkTheme()
         controls.darkTheme()
     })
 
     buttonLightMode.addEventListener('click',function(){
         sound.pressButton()
+        controls.buttonLightTheme()
         controls.lightTheme()
     })
 

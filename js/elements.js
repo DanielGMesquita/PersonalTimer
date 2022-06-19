@@ -13,6 +13,7 @@ const rainSound = document.querySelector('.rain')
 const coffeeShopSound = document.querySelector('.coffeeshop')
 const firePlaceSound = document.querySelector('.fireplace')
 const volumeControl = document.querySelector('.volume')
+const page = document.querySelector('.page')
 
 
 export{
@@ -30,5 +31,6 @@ export{
     rainSound,
     coffeeShopSound,
     firePlaceSound,
-    volumeControl
+    volumeControl,
+    page
 }
