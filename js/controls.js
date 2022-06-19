@@ -56,7 +56,7 @@ export default function Controls(
         if (!userMinutes){
             return
         }  else{
-            return userMinutes
+            return Number(userMinutes)
         }
     }
     
@@ -104,6 +104,7 @@ export default function Controls(
         rain,
         forest,
         coffeeShop,
-        firePlace
+        firePlace,
+        
     }
 }

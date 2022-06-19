@@ -78,7 +78,6 @@ export default function ({controls, timer, sound}){
     rainSound.addEventListener('click', function(){
         controls.rain()
         sound.pressRainButton()
-
     })
 
     forestSound.addEventListener('click', function(){

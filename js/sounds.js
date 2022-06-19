@@ -17,20 +17,20 @@ export default function(){
     const firePlaceVolume= document.getElementById('fireplace')
 
     function volumeStandardSet(){
-        rain.volume = 0.5
-        forest.volume = 0.5
-        coffeeShop.volume = 0.5
-        firePlace.volume = 0.5
-        document.getElementById('coffeeshop').value = "0"
-        document.getElementById('forest').value = "0"
-        document.getElementById('rain').value = "0"
-        document.getElementById('fireplace').value = "0"
+        rain.volume = 0
+        forest.volume = 0
+        coffeeShop.volume = 0
+        firePlace.volume = 0
+        rainVolume.value = "0"
+        forestVolume.value = "0"
+        coffeeShopVolume.value = "0"
+        firePlaceVolume.value = "0"
     }
 
     volumeStandardSet()
 
     function rainVolumeSet(){
-        let volume = rain.volume
+        let volume = rain.volume = 0.5
         rainVolume.value = String(rain.volume*100)
         rainVolume.addEventListener('change', function(){
             rain.volume = rainVolume.value/100
@@ -40,8 +40,9 @@ export default function(){
         rain.volume = volume
     }
     
+    
     function forestVolumeSet(){
-        let volume = forest.volume
+        let volume = forest.volume = 0.5
         forestVolume.value = String(forest.volume*100)
         forestVolume.addEventListener('change', function(){
             forest.volume = forestVolume.value/100
@@ -52,7 +53,7 @@ export default function(){
     }
 
     function firePlaceVolumeSet(){
-        let volume = firePlace.volume
+        let volume = firePlace.volume = 0.5
         firePlaceVolume.value = String(firePlace.volume*100)
         firePlaceVolume.addEventListener('change', function(){
             firePlace.volume = firePlaceVolume.value/100
@@ -63,7 +64,7 @@ export default function(){
     }
 
     function coffeeShopVolumeSet(){
-        let volume = coffeeShop.volume
+        let volume = coffeeShop.volume = 0.5
         coffeeShopVolume.value = String(coffeeShop.volume*100)
         coffeeShopVolume.addEventListener('change', function(){
             coffeeShop.volume = coffeeShopVolume.value/100
@@ -121,7 +122,7 @@ export default function(){
     }
 
     function stopSound(){
-        volumeStandardSet()
+
         rain.pause()
         firePlace.pause()
         coffeeShop.pause()
@@ -136,6 +137,10 @@ export default function(){
         pressButton,
         endAlert,
         stopSound,
-        volumeStandardSet
+        volumeStandardSet,
+        rainVolumeSet,
+        forestVolumeSet,
+        firePlaceVolumeSet,
+        coffeeShopVolumeSet
     }
 }
