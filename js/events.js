@@ -59,12 +59,12 @@ export default function ({controls, timer, sound}){
 
     minutesAdd5.addEventListener('click', function(){
         sound.pressButton()
-        timer.moreFiveMinutes()
+        timer.addFive()
     })
 
     minutesReduce5.addEventListener('click', function(){
         sound.pressButton()
-        timer.lessFiveMinutes()
+        timer.reduceFive()
     })
 
     coffeeShopSound.addEventListener('click',function(){
@@ -75,6 +75,7 @@ export default function ({controls, timer, sound}){
     firePlaceSound.addEventListener('click', function(){
         controls.firePlace()
         sound.pressFirePlaceButton()
+        sound.firePlaceVolumeSet()
     })
 
     rainSound.addEventListener('click', function(){

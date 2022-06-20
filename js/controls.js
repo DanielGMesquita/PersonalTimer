@@ -32,6 +32,10 @@ export default function Controls(
 
     function stop(){
         buttonSet.classList.remove('hide')
+        forestSound.classList.remove('active')
+        rainSound.classList.remove('active')
+        firePlaceSound.classList.remove('active')
+        coffeeShopSound.classList.remove('active')
         resetVolumeValues()
     }
 
@@ -49,7 +53,6 @@ export default function Controls(
 
     function lightTheme(){
         page.classList.add('dark')
-        page.classList.remove('light')
     }
 
     function buttonLightTheme(){
@@ -59,7 +62,6 @@ export default function Controls(
 
     function darkTheme(){
         page.classList.remove('dark')
-        page.classList.add('light')
     
     }
 
@@ -73,6 +75,7 @@ export default function Controls(
     }
     
     function forest(){
+        resetVolumeValues()
         forestSound.classList.add('active')
         rainSound.classList.remove('active')
         firePlaceSound.classList.remove('active')
@@ -81,6 +84,7 @@ export default function Controls(
     }
 
     function rain(){
+        resetVolumeValues()
         forestSound.classList.remove('active')
         rainSound.classList.add('active')
         firePlaceSound.classList.remove('active')
@@ -89,6 +93,7 @@ export default function Controls(
     }
 
     function firePlace(){
+        resetVolumeValues()
         forestSound.classList.remove('active')
         rainSound.classList.remove('active')
         firePlaceSound.classList.add('active')
@@ -97,6 +102,7 @@ export default function Controls(
     }
 
     function coffeeShop(){
+        resetVolumeValues()
         forestSound.classList.remove('active')
         rainSound.classList.remove('active')
         firePlaceSound.classList.remove('active')

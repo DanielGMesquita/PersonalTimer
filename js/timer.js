@@ -5,9 +5,11 @@ export default function({
     resetControls
 }){
     let minutes = Number(minutesDisplay.textContent)
+    let initialMinutes = minutes
     let endTimer
 
     function reset(){
+        minutes = initialMinutes
         updateMinutes(minutes)
         updateDisplay(minutes, 0)
         clearTimeout(endTimer)
@@ -38,7 +40,7 @@ export default function({
             }
 
             if(seconds <= 0){
-                seconds = 60;
+                seconds = 5;
                 --minutes
             }
 
@@ -54,19 +56,22 @@ export default function({
 
     function updateMinutes (newMinutes){
         minutes = newMinutes
+        initialMinutes = newMinutes
     }
 
-    // function moreFiveMinutes(newMinutes){
-    //     minutes += 5
-    //     newMinutes = newMinutes === undefined ? minutes : newMinutes
-    //     minutesDisplay.textContent = String(newMinutes).padStart(2,0)
-    // }
+    function addFive (){
+        minutes = Number(minutesDisplay.textContent) + 5
+        minutesDisplay.textContent = String(minutes).padStart(2,0)
+    }
 
-    // function lessFiveMinutes(newMinutes){
-    //     minutes -= 5
-    //     newMinutes = newMinutes === undefined ? minutes : newMinutes
-    //     minutesDisplay.textContent = String(newMinutes).padStart(2,0)
-    // }
+    function reduceFive (){
+        minutes = Number(minutesDisplay.textContent) - 5
+        if (minutes < 0){
+            minutes = Number(initialMinutes)
+            return
+        }
+        minutesDisplay.textContent = String(minutes).padStart(2,0)
+    }
 
     return{
         countDown,
@@ -74,8 +79,8 @@ export default function({
         updateMinutes,
         updateDisplay,
         reset,
-        // moreFiveMinutes,
-        // lessFiveMinutes
+        addFive,
+        reduceFive
     }
 
 }

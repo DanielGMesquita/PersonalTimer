@@ -21,7 +21,7 @@ body {
     font-weight: 500;
     min-height: 100vh;
     font-family: 'Roboto', sans-serif;
-    padding: 0 2rem 0;
+    padding: 2rem 2rem;
 }
 
 body.dark{
@@ -100,6 +100,7 @@ main #sounds{
 }
 
 main #sounds button{
+    background: hsla(240, 9%, 89%, 1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,13 +109,33 @@ main #sounds button{
     width: clamp(8rem, 8rem + 5vw, 13.8rem);
 }
 
+main #sounds button.active{
+    background: hsla(194, 97%, 31%, 1);
+}
+
+body.dark main #sounds button{
+    background: hsla(240, 6%, 17%, 1);
+}
+
+body.dark main #sounds button.active{
+    background: hsla(195, 74%, 15%, 1);
+}
+
 main #sounds button input{
     appearance: none;
-    display: inline-block;
     width: 9rem;
     height: 0.4rem;
     border-radius: 0.5rem;
     background: black;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));;
+}
+
+main #sounds button.active input{
+    background: #FFFFFF;
+}
+
+body.dark main #sounds button input{
+    background: #FFFFFF;
 }
 
 main #sounds button input::-webkit-slider-thumb{
@@ -126,13 +147,29 @@ main #sounds button input::-webkit-slider-thumb{
     cursor: pointer;
 }
 
+body.dark main #sounds button input::-webkit-slider-thumb{
+    background: #FFFFFF;
+}
+
+main #sounds button.active input::-webkit-slider-thumb{
+    background: #FFFFFF;
+}
+
 main #sounds button svg{
     width: clamp(2rem, 2rem + 4vw,4.4rem);
     margin-bottom: 3.2rem;
 }
 
+main #sounds button.active svg path{
+    fill: #FFFFFF;
+}
+
 main #sounds button svg path{
     fill: black
+}
+
+body.dark main #sounds button svg path{
+    fill: #FFFFFF;
 }
 
 
