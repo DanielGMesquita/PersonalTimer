@@ -24,6 +24,6 @@ Fornecer um cronômetro regressivo para acompanhamento de estudos, trabalho e ou
 * Adição de sons via JavaScript
 * Eventlisteners para alteração de elementos HTML
 
-#### Próximos passos: inserir animações e transições e trazer algumas imagens aqui para o README para deixar mais didático (quando estiver pronto, claro).
+#### Próximos passos: Inserir imagens de background temáticas aleatórias e trazer algumas imagens disso tudo funcionando aqui para o README para deixar mais didático (quando estiver pronto, claro).
 
 ##### Caso tenha alguma alteração a recomendar, pode ficar a vontade.
