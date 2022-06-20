@@ -38,7 +38,7 @@ export default function({
             }
 
             if(seconds <= 0){
-                seconds = 3;
+                seconds = 60;
                 --minutes
             }
 
