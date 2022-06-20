@@ -14,6 +14,12 @@ const coffeeShopSound = document.querySelector('.coffeeshop')
 const firePlaceSound = document.querySelector('.fireplace')
 const volumeControl = document.querySelector('.volume')
 const page = document.querySelector('.page')
+const linkedin = document.querySelector('.linkedin')
+const linkedinDark = document.querySelector('.linkedinDark')
+const discord = document.querySelector('.discord')
+const discordDark = document.querySelector('.discordDark')
+const github = document.querySelector('.github')
+const githubDark = document.querySelector('.githubDark')
 
 
 export{
@@ -32,5 +38,11 @@ export{
     coffeeShopSound,
     firePlaceSound,
     volumeControl,
-    page
+    page,
+    linkedin,
+    linkedinDark,
+    discord,
+    discordDark,
+    github,
+    githubDark
 }

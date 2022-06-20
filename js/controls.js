@@ -9,7 +9,7 @@ export default function Controls(
         rainSound,
         coffeeShopSound,
         firePlaceSound,
-        page
+        page,
     }
 ){  
     function resetVolumeValues(){

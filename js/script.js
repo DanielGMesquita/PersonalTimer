@@ -14,7 +14,7 @@ import {
     forestSound,
     firePlaceSound,
     coffeeShopSound,
-    page
+    page,
 } from "./elements.js"
 
 const sound = Sound()
@@ -29,7 +29,7 @@ const controls = Controls({
     forestSound,
     firePlaceSound,
     coffeeShopSound,
-    page
+    page,
 })
 
 const timer = Timer({
