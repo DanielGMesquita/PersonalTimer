@@ -72,6 +72,10 @@ body #settings button svg, body #screen button svg{
     width: clamp(2rem, 2rem + 5vw, 4.8rem);
 }
 
+body #settings button:hover, body #screen button:hover{
+    transform: scale(1.15);
+}
+
 main #timer{
     display: flex;
     flex-direction: column;
@@ -95,6 +99,30 @@ main #timer #controls button svg{
     width: clamp(2rem, 2rem + 5vw, 4.8rem);
 }
 
+main #timer #controls button svg path{
+    fill: var(--bg-color-dark);
+}
+
+body.dark main #timer #controls button svg path{
+    fill: var(--bg-color-light);
+}
+
+main #timer #controls button:hover{
+    transform: scale(1.15);
+}
+
+main #timer #controls button:active{
+    transform: scale(1);
+}
+
+main #timer #controls button:active svg path{
+    fill:blue;
+}
+
+body.dark main #timer #controls button:active svg path{
+    opacity: 0.7;
+}
+
 main #sounds{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -112,6 +140,16 @@ main #sounds button{
     border-radius: 2.4rem;
     padding: 2.4rem;
     width: clamp(8rem, 8rem + 5vw, 13.8rem);
+    transition: 200ms linear;
+}
+
+main #sounds button:hover{
+    transform: scale(1.15);
+    transition: 200ms;
+}
+
+main #sounds button:checked{
+    opacity: 0.7;
 }
 
 main #sounds button.active{
