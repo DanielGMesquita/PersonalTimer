@@ -40,7 +40,7 @@ export default function({
             }
 
             if(seconds <= 0){
-                seconds = 5;
+                seconds = 60;
                 --minutes
             }
 
