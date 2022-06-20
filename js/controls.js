@@ -68,7 +68,7 @@ export default function Controls(
         if (!userMinutes){
             return
         }  else{
-            return Number(userMinutes)
+            return userMinutes
         }
     }
     

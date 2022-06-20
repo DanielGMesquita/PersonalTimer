@@ -40,7 +40,6 @@ export default function(){
         rain.volume = volume
     }
     
-    
     function forestVolumeSet(){
         let volume = forest.volume = 0.5
         forestVolume.value = String(forest.volume*100)
@@ -74,15 +73,12 @@ export default function(){
         coffeeShop.volume = volume
     }
 
-
-
     function pressButton(){
         buttonPressAudio.play()
     }
 
     function endAlert(){
         endSound.play()
-        stopSound()
     }
 
     function pressForestButton(){

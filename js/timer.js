@@ -1,16 +1,15 @@
-
+import sounds from "./sounds.js"
 export default function({
     minutesDisplay,
     secondsDisplay,
     resetControls
 }){
     let minutes = Number(minutesDisplay.textContent)
-    let initialMinutes = minutes
     let endTimer
 
     function reset(){
-        updateMinutes(initialMinutes)
-        updateDisplay(initialMinutes, 0)
+        updateMinutes(minutes)
+        updateDisplay(minutes, 0)
         clearTimeout(endTimer)
     }
 
@@ -33,10 +32,13 @@ export default function({
             if(timerFinished){
                 resetControls()
                 updateDisplay()
+                sounds().stopSound()
+                sounds().endAlert()
+                return
             }
 
             if(seconds <= 0){
-                seconds = 60;
+                seconds = 3;
                 --minutes
             }
 
@@ -54,17 +56,17 @@ export default function({
         minutes = newMinutes
     }
 
-    function moreFiveMinutes(newMinutes){
-        minutes += 5
-        newMinutes = newMinutes === undefined ? minutes : newMinutes
-        minutesDisplay.textContent = String(newMinutes).padStart(2,0)
-    }
+    // function moreFiveMinutes(newMinutes){
+    //     minutes += 5
+    //     newMinutes = newMinutes === undefined ? minutes : newMinutes
+    //     minutesDisplay.textContent = String(newMinutes).padStart(2,0)
+    // }
 
-    function lessFiveMinutes(newMinutes){
-        minutes -= 5
-        newMinutes = newMinutes === undefined ? minutes : newMinutes
-        minutesDisplay.textContent = String(newMinutes).padStart(2,0)
-    }
+    // function lessFiveMinutes(newMinutes){
+    //     minutes -= 5
+    //     newMinutes = newMinutes === undefined ? minutes : newMinutes
+    //     minutesDisplay.textContent = String(newMinutes).padStart(2,0)
+    // }
 
     return{
         countDown,
@@ -72,8 +74,8 @@ export default function({
         updateMinutes,
         updateDisplay,
         reset,
-        moreFiveMinutes,
-        lessFiveMinutes
+        // moreFiveMinutes,
+        // lessFiveMinutes
     }
 
 }

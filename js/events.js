@@ -10,8 +10,7 @@ import {
     firePlaceSound,
     coffeeShopSound,
     rainSound,
-    forestSound,
-    page
+    forestSound
 } from "./elements.js"
 
 export default function ({controls, timer, sound}){

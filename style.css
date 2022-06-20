@@ -74,6 +74,7 @@ main #timer{
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    margin-bottom: 4rem;
 }
 
 main #timer #display{
@@ -93,7 +94,7 @@ main #timer #controls button svg{
 main #sounds{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.5rem;
+    gap: 3.2rem;
     width: fit-content;
     align-items: center;
 }
@@ -104,16 +105,29 @@ main #sounds button{
     align-items: center;
     border-radius: 2.4rem;
     padding: 2.4rem;
+    width: clamp(8rem, 8rem + 5vw, 13.8rem);
 }
 
 main #sounds button input{
+    appearance: none;
+    display: inline-block;
     width: 9rem;
+    height: 0.4rem;
+    border-radius: 0.5rem;
+    background: black;
+}
+
+main #sounds button input::-webkit-slider-thumb{
+    appearance: none;
+    border-radius: 2rem;
+    background: black;
+    width: 1.6rem;
+    height: 1.6rem;
     cursor: pointer;
-    background-color: black;
 }
 
 main #sounds button svg{
-    width: 4.4rem;
+    width: clamp(2rem, 2rem + 4vw,4.4rem);
     margin-bottom: 3.2rem;
 }
 
@@ -121,20 +135,28 @@ main #sounds button svg path{
     fill: black
 }
 
-main #sounds button input{
-    width: 9rem;
-    height: 1.6rem;
-    cursor: pointer;
-}
-
 
 footer {
     font-size: 1.2rem;
+    width: fit-content;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     gap: 2rem;
     align-items: center;
-    justify-content: end;
+    justify-self: end;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+body.dark footer{
+    filter: drop-shadow(0px 4px 4px rgb(255, 255, 255));
+}
+
+footer p{
+    color:var(--bg-color-dark);
 }
 
 footer p span{
