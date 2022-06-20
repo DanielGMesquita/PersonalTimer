@@ -17,14 +17,14 @@ export default function(){
     const firePlaceVolume= document.getElementById('fireplace')
 
 
+    function volumeStandardSet(){
+        rain.volume = 0.5
+        forest.volume = 0.5
+        coffeeShop.volume = 0.5
+        firePlace.volume = 0.5
+    }
 
-    rain.volume = 0.5,
-    forest.volume = 0.5,
-    coffeeShop.volume = 0.5,
-    firePlace.volume = 0.5
-
-
-
+    volumeStandardSet()
 
     function rainVolumeSet(){
         forest.volume = 0.5
@@ -108,7 +108,7 @@ export default function(){
     }
 
     function stopSound(){
-        
+        volumeStandardSet()
         rain.pause()
         firePlace.pause()
         coffeeShop.pause()

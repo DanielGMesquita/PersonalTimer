@@ -75,7 +75,6 @@ export default function ({controls, timer, sound}){
     firePlaceSound.addEventListener('click', function(){
         controls.firePlace()
         sound.pressFirePlaceButton()
-        sound.firePlaceVolumeSet()
     })
 
     rainSound.addEventListener('click', function(){
