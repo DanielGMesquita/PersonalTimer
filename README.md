@@ -1,19 +1,25 @@
-# Seu Timer Personalizado
-[Personal Timer](https://danielgmesquita.github.io/PersonalTimer/)
+<h1 align="center">Welcome to PersonalTimer 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
+</p>
 
-## Objetivo: Fornecer um cronômetro regressivo para acompanhamento de estudos, trabalho e outras atividades.
+> A timer that can be used as a guide to study/work performance with backgrounds sounds to improve focus. Also works as white noise.
 
-### Funcionalidades: 
-* Botões de play, pause e stop
+### 🏠 [Homepage](https://danielgmesquita.github.io/PersonalTimer/)
 
-* Botão set para o usuário escolher o tempo
-* Dark mode
-* Quatro audios para utilizar como som ambiente com regulagem de volume
-* Botão de "+" e "-" para aumentar e reduzir 5 minutos no timer, respectivamente
-* Audio com alerta para o fim do tempo estipulado
+## Usage
 
-### Técnicas utilizadas: DOM, módulos do ES6, callback functions, padrão factory, injeção de dependências, princípios de Clean Code, variáveis de CSS, display grid, adição de sons via JavaScript, eventlisteners para alteração de elementos HTML
+```sh
+Top-left: time settings<br>Top-right: dark/light mode<br>Center: timer controls (play/pause, stop, + 5 minutes, - five minutes) and sounds (forest, rain, fireplace and coffeeshop)
+```
 
-#### Próximos passos: inserir animações e transições e trazer algumas imagens aqui para o README para deixar mais didático (quando estiver pronto, claro).
+## Author
 
-##### Caso tenha alguma alteração a recomendar, pode ficar a vontade.
+👤 **Daniel Mesquita**
+
+* Github: [@DanielGMesquita](https://github.com/DanielGMesquita)
+* LinkedIn: [@danielgmesquita](https://linkedin.com/in/danielgmesquita)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
