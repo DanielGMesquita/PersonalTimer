@@ -16,6 +16,10 @@ Center-top: timer controls (play/pause, stop, + 5 minutes, - five minutes)
 Center-bottom: sound controls (forest, rain, fireplace and coffeeshop)
 ```
 
+## Issues
+
+> Volume control is not working well in mobile devices yet.
+
 ## Author
 
 👤 **Daniel Mesquita**
