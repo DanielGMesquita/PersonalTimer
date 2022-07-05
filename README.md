@@ -3,6 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
+<<<<<<< HEAD
 > A timer that can be used as a guide to study/work performance with backgrounds sounds to improve focus. Also works as white noise.
 
 ### 🏠 [Homepage](https://danielgmesquita.github.io/PersonalTimer/)
